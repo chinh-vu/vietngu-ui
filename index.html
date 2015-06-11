@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VietNgu MN - School Apps</title>
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/application.css" rel="stylesheet">
+    <link href="./assets/css/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="app-container">
+    <div id="header-region"></div>
+    <div id="main-region" class="container">
+        <p>Here is static content in the web page. You'll notice that it gets replaced by our app as soon as we start
+            it.</p>
+    </div>
+
+    <div id="dialog-region"></div>
+</div>
+
+
+<script type="text/template" id="family-list-item">
+    <td><%- addressLine1 %></td>
+    <td><%- addressLine2 %></td>
+    <td><%- city %></td>
+    <td><%- state %></td>
+    <td><%- postalCode %></td>
+    <td><a href="#" class="btn btn-small js-show"><i class="icon-eye-open"></i>Show</a>
+        <button class="btn btn-small js-delete"><i class="icon-remove"></i>Delete</button>
+    </td>
+</script>
+
+<script type="text/template" id="family-list">
+    <thead>
+    <th>Address Line 1</th>
+    <th>Address Line 2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postal Code</th>
+    <th></th>
+    </thead>
+    <tbody>
+    </tbody>
+</script>
+
+<script src="./assets/js/vendor/jquery.js"></script>
+<script src="./assets/js/vendor/jquery-ui-1.10.3.js"></script>
+<script src="./assets/js/vendor/json2.js"></script>
+<script src="./assets/js/vendor/underscore.js"></script>
+<script src="./assets/js/vendor/backbone.js"></script>
+<script src="./assets/js/vendor/backbone.picky.js"></script>
+<script src="./assets/js/vendor/backbone.syphon.js"></script>
+<script src="./assets/js/vendor/backbone.localstorage.js"></script>
+<script src="./assets/js/vendor/backbone.marionette.js"></script>
+<script src="./assets/js/vendor/spin.js"></script>
+<script src="./assets/js/vendor/spin.jquery.js"></script>
+
+<script src="./assets/js/app.js"></script>
+<script src="./assets/js/entities/family.js"></script>
+<script src="assets/js/apps/admission/list/family_view.js"></script>
+<script src="assets/js/apps/admission/list/family_controller.js"></script>
+
+<script type="text/javascript">
+    SchoolAppsManager.start();
+</script>
+</body>
+</html>
